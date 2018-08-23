@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as io from 'socket.io-client';
 
 @Injectable({
@@ -10,6 +11,10 @@ export class SocketService {
      private socket;
      constructor(){ 
 	     this.socket = io(this.url);
+	 }
+	 
+	 ngOnInit(){
+		 
 	 }
 	 
 	 public sendMessages(message){

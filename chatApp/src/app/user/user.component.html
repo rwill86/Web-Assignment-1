@@ -1,0 +1,14 @@
+     <div class="h1">User List</div>
+         <div class="userList" *ngFor="let user of users">
+             {{user.username}}: {{user.password}}
+			 <input type="text" class="input" name="username" [(ngModel)]="user.username">
+			 <input type="text" class="input" name="password" [(ngModel)]="user.password">
+		     <button (click)="updateUser(user)">Save</button>
+             <button (click)="deleteUser(user)">Delete</button>
+         </div>
+     <div class="h1">Create User</div>
+	     <div class="userCreate">
+		     <input type="text" class="input" name="username" [(ngModel)]="username">
+			 <input type="text" class="input" name="password" [(ngModel)]="password">
+			 <button (click)="createUser(username, password)" type="submit" name="submit" class="button">Create</button>
+		 </div>

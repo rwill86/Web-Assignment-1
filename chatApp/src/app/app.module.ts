@@ -1,6 +1,7 @@
 import { FormsModule } from '@angular/forms'; //for form
 import { HttpModule } from '@angular/http'; //for http
-import { SocketService } from './socket.service'; //for created service
+import { SocketService } from './socket/socket.service'; //for created service
+import { UserService } from './user/user.service';  //for create user
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,6 +12,8 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import { ChatComponent } from './chat/chat.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { UserComponent } from './user/user.component';
+import { SocketComponent } from './socket/socket.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     MenuComponent,
     LoginComponent,
     ChatComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    UserComponent,
+    SocketComponent
   ],
   imports: [
     FormsModule,
