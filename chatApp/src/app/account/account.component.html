@@ -1,0 +1,23 @@
+<!-- main content -->
+<div class="mainContent">   
+	 <div class="h1">Account</div>
+     <div class="lineFooter"></div>	
+     <div class="subContent" *ngIf="!login">
+	     <div class="p">Do you want to sign to see your information.</div>
+		 <button (click)="signin()" type="submit" name="submit" class="smallButton">Sign In</button>
+     </div>
+	 <div class="subContent" *ngIf="login">
+	     <div class="h3">User Information</div>
+	     <div class="p">UserID: {{userID}}</div>
+	     <div class="p"> UserName: {{username}}</div>
+		 <div class="p"> Email: {{email}}</div>
+	     <div class="p"> Birthday: {{birthday}}</div>
+	     <div class="p"> Age: {{age}}</div>
+	 </div>
+</div>
+<!-- main content -->
+<div class="mainContent" *ngIf="login">
+	 <div class="h1">Logout</div>
+	 <div class="p">Do you want to logout?</div>
+	 <button (click)="logout()" type="submit" name="submit" class="smallButton">Log Out</button>
+</div>
