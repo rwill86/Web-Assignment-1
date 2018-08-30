@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+/* style.css */
+/* html style */
+>>>>>>> UserService
 html, body{
     margin: 0px; 
     padding: 0px;	
@@ -8,16 +13,33 @@ html, body{
     font-family: Geneva, sans-serif, MS PGothic, Hiragino Kaku Gothic Pro;
     background: #202020;
 }
+<<<<<<< HEAD
 
+=======
+/* a style */
+>>>>>>> UserService
 a{
     color: #F5F5F5;
     text-decoration: none;
 }
+<<<<<<< HEAD
 
 a:hover{
     color: #C70039;	
 }
 
+=======
+/* a:hover style */
+a:hover{
+    color: #C70039;	
+}
+/* img style */
+img{
+	width: 100%;
+	height: 100%;
+}
+/* .wrap style */
+>>>>>>> UserService
 .wrap{
 	width: 90%;
 	max-width: 1550px;
@@ -26,7 +48,11 @@ a:hover{
 	padding: 0px;
 	padding-top: 90px;
 }
+<<<<<<< HEAD
 
+=======
+/* .nav style */
+>>>>>>> UserService
 .nav{
 	position: relative;
 	margin: 0 auto;
@@ -39,7 +65,11 @@ a:hover{
 	text-align: center;
 	overflow: hidden;
 }
+<<<<<<< HEAD
 
+=======
+/* .linkContent a style */
+>>>>>>> UserService
 .linkContent a{
 	margin: 5px;
 	padding: 10px;
@@ -51,13 +81,37 @@ a:hover{
 	border: 1px solid #141618;
 	border-radius: 2px;
 }
+<<<<<<< HEAD
 
+=======
+/* .linkContent a:hover style */
+.linkContent a:hover{
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF; 
+}
+/* .logoContent style */
+.logoContent a{
+	margin: 5px;
+	width: 120px;
+	height: 50px;
+	float: left;
+	color: #FFFFFF;
+	border: 1px solid #C70039;
+	border-radius: 2px;
+}
+/* .linkContent a .current style */
+>>>>>>> UserService
 .linkContent a .current{
 	color: #C70039;
 	background: #C70039;
 	background: #C70039;
 }
+<<<<<<< HEAD
 
+=======
+/* .mainContent style */
+>>>>>>> UserService
 .mainContent{
 	position: relative;
 	margin: 0 auto;
@@ -66,7 +120,11 @@ a:hover{
 	background: #080808;
 	border: 0.5px solid #000000;
 }
+<<<<<<< HEAD
 
+=======
+/* .signContent style */
+>>>>>>> UserService
 .signContent{
     position: relative;
     margin: 0 auto;
@@ -77,46 +135,84 @@ a:hover{
     border-radius: 2px;
 	border: 0.5px solid #000000;
 }
+<<<<<<< HEAD
 
+=======
+/* .subContent{ style */
+>>>>>>> UserService
 .subContent{
     display: block;
 	margin: 0 auto;
 	padding: 10px 0px;
 	overflow: hidden;
 }
+<<<<<<< HEAD
 
 .input{
 	width: 100%;
 	padding: 5px;
+=======
+/* .input style */
+.input{
+	width: 100%;
+	padding: 5px;
+	color: #000000;
+>>>>>>> UserService
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin-bottom: 10px;
     border: 0.5px solid #DCDCDC; 
 	box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
+<<<<<<< HEAD
 
+=======
+/* .h1 style */
+>>>>>>> UserService
 .h1{
     margin: 0 auto;
 	font-size: 55px;
 	padding: 0px;
 }
+<<<<<<< HEAD
 
+=======
+/* .h3 style */
+>>>>>>> UserService
 .h3{
     margin: 0 auto;
 	font-size: 20px;
 	color: #696969; 
 	padding: 0px;
 }
+<<<<<<< HEAD
 
+=======
+/* .p style */
+>>>>>>> UserService
 .p{
 	margin: 0 auto;
 	padding: 0px;
 }
+<<<<<<< HEAD
 
 .lineFooter{
 	border: 0.5px solid #C70039;
 }
 
+=======
+/* .error style */
+.error{
+	margin: 0 auto;
+	padding: 0px;
+	color: #C70039;
+}
+/* .lineFooter style */
+.lineFooter{
+	border: 0.5px solid #C70039;
+}
+/* .chatboxContent style */
+>>>>>>> UserService
 .chatboxContent{
     position: relative;
 	margin: 0 auto;
@@ -128,12 +224,16 @@ a:hover{
 	border: 0.5px solid #DCDCDC;
     border-radius: 2px	
 }
+<<<<<<< HEAD
 
 img{
 	width: 100%;
 	height: 100%;
 }
 
+=======
+/* .userMessage style */
+>>>>>>> UserService
 .userMessage{
 	position: relative;	
 	margin: 5px;
@@ -143,11 +243,19 @@ img{
 	background: #000000;
 	border: 0.5px solid #C70039;
 }
+<<<<<<< HEAD
 
 .white{
 	background: #FFFFFF;
 }
 
+=======
+/* .white style */
+.white{
+	background: #FFFFFF;
+}
+/* .smallButton style */
+>>>>>>> UserService
 .smallButton{
 	margin: 0 auto;
 	margin-top: 15px;
@@ -158,7 +266,11 @@ img{
 	cursor: pointer;
 	overflow: hidden;
 }
+<<<<<<< HEAD
 
+=======
+/* .button style */
+>>>>>>> UserService
 .button{
     display: block;
     width: 100%;
@@ -172,8 +284,16 @@ img{
 	cursor: pointer;
 	overflow: hidden;
 }
+<<<<<<< HEAD
 
 .button:hover, .smallButton:hover{
 	color: #000000;
 	background: #FFFFFF;
+=======
+/* .button:hover, .smallButton:hover style */
+.button:hover, .smallButton:hover{
+	color: #000000;
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF; 
+>>>>>>> UserService
 }

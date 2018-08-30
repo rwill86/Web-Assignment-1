@@ -1,3 +1,4 @@
+<<<<<<< HEAD
      <div class="h1">User List</div>
          <div class="userList" *ngFor="let user of users">
              {{user.username}}: {{user.password}}
@@ -12,3 +13,37 @@
 			 <input type="text" class="input" name="password" [(ngModel)]="password">
 			 <button (click)="createUser(username, password)" type="submit" name="submit" class="button">Create</button>
 		 </div>
+=======
+<!-- main content -->
+<div class="mainContent">     
+	 <div class="h1">User List</div>
+	 <div class="lineFooter"></div>	
+     <div class="subContent" *ngIf="!login">
+	     <div class="p">Sign in if you're a super adim or group adim to be able to use this page.</div>
+		 <button (click)="signin()" type="submit" name="submit" class="smallButton">Sign In</button>
+     </div>	 
+	 <div class="subContent" *ngIf="login">
+         <div class="userList" *ngFor="let user of users;">
+         {{user.username}}: {{user.email}}
+	         <input type="text" class="input" name="username" [(ngModel)]="user.username">
+	         <input type="email" class="input" name="email" [(ngModel)]="user.email">
+		     <button (click)="updateUser(user)" type="submit" name="submit" class="smallButton">Save</button>
+             <button (click)="deleteUser(user)" type="submit" name="submit" class="smallButton">Delete</button>
+         </div>
+	 </div>
+</div>
+<!-- main content -->
+<div class="mainContent" *ngIf="login">  
+     <div class="h1">Create User</div>
+	 <div class="lineFooter"></div>	
+	 <div class="subContent">
+	     <div class="userCreate">
+	         <div class="p">UserName</div>
+		     <input type="text" class="input" name="username" [(ngModel)]="username" placeholder="UserName">
+		     <div class="p">Email</div>
+	         <input type="email" class="input" name="email" [(ngModel)]="email" placeholder="Email">
+	         <button (click)="createUser(username, email)" type="submit" name="submit" class="smallButton">Create</button>
+	     </div>
+	 </div>
+</div>
+>>>>>>> UserService
