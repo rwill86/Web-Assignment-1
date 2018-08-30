@@ -1,5 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
+import { ChatComponent } from './chat/chat.component';
+
+
+const routes: Routes = [
+     {path:'login', component:LoginComponent},
+     {path:'account', component:AccountComponent},
+	 {path:'chat', component:ChatComponent}
+];
+
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 //Componets
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -17,10 +34,21 @@ const routes: Routes = [
 	 {path:'**', redirectTo:'404'}
 ];
 //NgModule
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+<<<<<<< HEAD
 //Class AppRou'Module
+=======
+<<<<<<< HEAD
+=======
+//Class AppRou'Module
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 export class AppRoutingModule{
 }

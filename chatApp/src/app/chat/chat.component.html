@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 <!-- main content -->
+=======
+<<<<<<< HEAD
+=======
+<!-- main content -->
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 <div class="mainContent">  
      <div class="h1">Chat Room</div>
 	 <div class="lineFooter"></div>
 	 <div class="subContent"> 
 	     <div class="p">Welcome {{userName}}</div>
 	 </div>
+<<<<<<< HEAD
 	 <!-- message box -->
 	 <div class="messageContent">
 	     <div class="p black" *ngIf="!messages">No messages Yet.</div>
@@ -22,6 +30,36 @@
      <div class="subContent">
 	     <input [(ngModel)]="message" class="input" name="message" id="message" placeholder="What's on your mind."/> 
 		 <button (click)="sendMessage()" type="submit" name="submit" class="smallButton">Send</button>
+=======
+<<<<<<< HEAD
+	 <div class="messages">
+	     <div class="subContent white message"> 
+	         <div class="userMessage" id="1" *ngFor="let message of messages;">
+=======
+	 <!-- message box -->
+	 <div class="messages">
+	     <div class="subContent white message"> 
+	         <div class="userMessage" id="1" *ngFor="let message of messages;">
+			     <!-- user message -->
+>>>>>>> UserService
+			     <div class="userTextBoxContent">
+			         <div class="userBox"></div>
+				     <span class="userText">{{message.text}}</span>
+			     </div>
+		     </div>
+	     </div>
+	 </div>
+</div>
+<<<<<<< HEAD
+=======
+<!-- main content -->
+>>>>>>> UserService
+<div class="mainContent">
+     <div class="subContent">
+	     <div class="p">Message box</div>
+	     <input [(ngModel)]="message" class="chatboxContent" name="message" placeholder="Enter message"/>
+		 <button (click)="sendMessage()" type="submit" name="submit" class="smallButton">Post</button>
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 	 </div>
 </div>
 

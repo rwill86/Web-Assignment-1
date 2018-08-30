@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     <div class="h1">User List</div>
+         <div class="userList" *ngFor="let user of users">
+             {{user.username}}: {{user.password}}
+			 <input type="text" class="input" name="username" [(ngModel)]="user.username">
+			 <input type="text" class="input" name="password" [(ngModel)]="user.password">
+		     <button (click)="updateUser(user)">Save</button>
+             <button (click)="deleteUser(user)">Delete</button>
+         </div>
+     <div class="h1">Create User</div>
+	     <div class="userCreate">
+		     <input type="text" class="input" name="username" [(ngModel)]="username">
+			 <input type="text" class="input" name="password" [(ngModel)]="password">
+			 <button (click)="createUser(username, password)" type="submit" name="submit" class="button">Create</button>
+		 </div>
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 <!-- main content -->
 <div class="mainContent">     
 	 <div class="h1">User List</div>
@@ -8,6 +27,7 @@
      </div>	 
 	 <div class="subContent" *ngIf="login">
          <div class="userList" *ngFor="let user of users;">
+<<<<<<< HEAD
              <div class="p">{{user.username}}: {{user.email}}</div>
 	         <input type="text" class="input" name="username" [(ngModel)]="user.username">
 	         <input type="email" class="input" name="email" [(ngModel)]="user.email">
@@ -18,6 +38,15 @@
 	 <div class="subContent" *ngIf="!users">
 	     <div class="p">Your not a Super Admin.</div>
 	 </div>
+=======
+         {{user.username}}: {{user.email}}
+	         <input type="text" class="input" name="username" [(ngModel)]="user.username">
+	         <input type="email" class="input" name="email" [(ngModel)]="user.email">
+		     <button (click)="updateUser(user)" type="submit" name="submit" class="smallButton">Save</button>
+             <button (click)="deleteUser(user)" type="submit" name="submit" class="smallButton">Delete</button>
+         </div>
+	 </div>
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 </div>
 <!-- main content -->
 <div class="mainContent" *ngIf="login">  
@@ -26,6 +55,7 @@
 	 <div class="subContent">
 	     <div class="userCreate">
 	         <div class="p">UserName</div>
+<<<<<<< HEAD
 		     <input type="text" class="input" name="username" [(ngModel)]="username" id="username" placeholder="UserName">
 		     <div class="p">Email</div>
 	         <input type="email" class="input" name="email" [(ngModel)]="email" id="email" placeholder="Email">
@@ -33,3 +63,13 @@
 	     </div>
 	 </div>
 </div>
+=======
+		     <input type="text" class="input" name="username" [(ngModel)]="username" placeholder="UserName">
+		     <div class="p">Email</div>
+	         <input type="email" class="input" name="email" [(ngModel)]="email" placeholder="Email">
+	         <button (click)="createUser(username, email)" type="submit" name="submit" class="smallButton">Create</button>
+	     </div>
+	 </div>
+</div>
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f

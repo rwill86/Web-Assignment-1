@@ -74,6 +74,14 @@ import 'core-js/es7/reflect';
  */
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
