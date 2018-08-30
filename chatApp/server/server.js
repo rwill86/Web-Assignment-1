@@ -21,9 +21,3 @@ var corsOptions = {
      origin: 'http://localhost:4200',
      optionSuccessStatus: 200
 };
-
-//var id = 1;
-//if(users.length > 0) {
-     //var maximum = Math.max.apply(Math, users.map(function(f){ return f.id; }));
-     //id = maximum + 1;
-//}

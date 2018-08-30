@@ -14,8 +14,7 @@ const httpOptions = {
 export class UserService{
 	 checking:string;
 	 //Constructor
-     constructor(private http:HttpClient){
-		 
+     constructor(private http:HttpClient){	 
 	 }		 
 	 //Get Users
 	 public getUsers(){

@@ -45,10 +45,15 @@ export class ChatComponent implements OnInit{
      }
      //SendMessage
 	 sendMessage(){
-		 var d = new Date();
-		 var h = d.getHours();
-		 var m = d.getMinutes();
-		 this.sockServ.sendMessages(this.userName + ' - ' + this.message + ' - ' + h + ':' + m);
+		 if(this.message !== ''){
+		     var d = new Date();
+		     var h = d.getHours();
+		     var m = d.getMinutes();
+		     this.sockServ.sendMessages(this.userName + ' - ' + this.message + ' - ' + h + ':' + m);
+	     } else{
+			 var me = document.getElementById('message');
+			 me.style.border = '2px solid #C70039';
+		 }
 	 }
 	 //Destory ng 
 	 ngOnDestory(){

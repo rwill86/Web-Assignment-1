@@ -8,6 +8,7 @@
      </div>
 	 <div class="subContent" *ngIf="login">
 	     <div class="h3">User Information</div>
+		 <div class="p">Admin type: {{Admin}}</div>
 	     <div class="p">UserID: {{userID}}</div>
 	     <div class="p"> UserName: {{username}}</div>
 		 <div class="p"> Email: {{email}}</div>
@@ -18,6 +19,9 @@
 <!-- main content -->
 <div class="mainContent" *ngIf="login">
 	 <div class="h1">Logout</div>
-	 <div class="p">Do you want to logout?</div>
-	 <button (click)="logout()" type="submit" name="submit" class="smallButton">Log Out</button>
+	 <div class="lineFooter"></div>	
+	 <div class="subContent">
+	     <div class="p">Do you want to logout?</div>
+	     <button (click)="logout()" type="submit" name="submit" class="smallButton">Log Out</button>
+	 </div>
 </div>

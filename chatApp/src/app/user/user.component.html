@@ -8,12 +8,15 @@
      </div>	 
 	 <div class="subContent" *ngIf="login">
          <div class="userList" *ngFor="let user of users;">
-         {{user.username}}: {{user.email}}
+             <div class="p">{{user.username}}: {{user.email}}</div>
 	         <input type="text" class="input" name="username" [(ngModel)]="user.username">
 	         <input type="email" class="input" name="email" [(ngModel)]="user.email">
-		     <button (click)="updateUser(user)" type="submit" name="submit" class="smallButton">Save</button>
-             <button (click)="deleteUser(user)" type="submit" name="submit" class="smallButton">Delete</button>
+		     <button (click)="updateUser(user)" type="submit" name="submit" class="smallButton"><i class="fas fa-save"></i> Save</button>
+             <button (click)="deleteUser(user)" type="submit" name="submit" class="smallButton"><i class="fas fa-trash-alt"></i> Delete</button>
          </div>
+	 </div>
+	 <div class="subContent" *ngIf="!users">
+	     <div class="p">Your not a Super Admin.</div>
 	 </div>
 </div>
 <!-- main content -->
@@ -23,9 +26,9 @@
 	 <div class="subContent">
 	     <div class="userCreate">
 	         <div class="p">UserName</div>
-		     <input type="text" class="input" name="username" [(ngModel)]="username" placeholder="UserName">
+		     <input type="text" class="input" name="username" [(ngModel)]="username" id="username" placeholder="UserName">
 		     <div class="p">Email</div>
-	         <input type="email" class="input" name="email" [(ngModel)]="email" placeholder="Email">
+	         <input type="email" class="input" name="email" [(ngModel)]="email" id="email" placeholder="Email">
 	         <button (click)="createUser(username, email)" type="submit" name="submit" class="smallButton">Create</button>
 	     </div>
 	 </div>

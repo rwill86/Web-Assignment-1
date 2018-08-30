@@ -38,7 +38,6 @@ export class LoginComponent implements OnInit{
 	 //Login User 
 	 loginUser(event){
 	     event.preventDefault();
-		 var message = document.getElementById('message');
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
 		 var fa = document.getElementById('fail');
