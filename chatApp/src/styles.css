@@ -1,7 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /* style.css */
 /* html style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+/* style.css */
+/* html style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 html, body{
     margin: 0px; 
@@ -14,21 +25,40 @@ html, body{
     background: #202020;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* a style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* a style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 a{
     color: #F5F5F5;
     text-decoration: none;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 a:hover{
     color: #C70039;	
 }
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 /* a:hover style */
 a:hover{
     color: #C70039;	
@@ -39,6 +69,13 @@ img{
 	height: 100%;
 }
 /* .wrap style */
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .wrap{
 	width: 90%;
@@ -49,9 +86,19 @@ img{
 	padding-top: 90px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .nav style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .nav style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .nav{
 	position: relative;
@@ -66,9 +113,19 @@ img{
 	overflow: hidden;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .linkContent a style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .linkContent a style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .linkContent a{
 	margin: 5px;
@@ -82,8 +139,16 @@ img{
 	border-radius: 2px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 /* .linkContent a:hover style */
 .linkContent a:hover{
 	color: #000000;
@@ -101,6 +166,13 @@ img{
 	border-radius: 2px;
 }
 /* .linkContent a .current style */
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .linkContent a .current{
 	color: #C70039;
@@ -108,9 +180,19 @@ img{
 	background: #C70039;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .mainContent style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .mainContent style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .mainContent{
 	position: relative;
@@ -121,9 +203,19 @@ img{
 	border: 0.5px solid #000000;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .signContent style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .signContent style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .signContent{
     position: relative;
@@ -136,9 +228,19 @@ img{
 	border: 0.5px solid #000000;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .subContent{ style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .subContent{ style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .subContent{
     display: block;
@@ -147,16 +249,32 @@ img{
 	overflow: hidden;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 .input{
 	width: 100%;
 	padding: 5px;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 /* .input style */
 .input{
 	width: 100%;
 	padding: 5px;
 	color: #000000;
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 	box-sizing: border-box;
 	border-radius: 2px;
@@ -165,9 +283,19 @@ img{
 	box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .h1 style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .h1 style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .h1{
     margin: 0 auto;
@@ -175,9 +303,19 @@ img{
 	padding: 0px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .h3 style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .h3 style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .h3{
     margin: 0 auto;
@@ -186,21 +324,40 @@ img{
 	padding: 0px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .p style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .p style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .p{
 	margin: 0 auto;
 	padding: 0px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 .lineFooter{
 	border: 0.5px solid #C70039;
 }
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 /* .error style */
 .error{
 	margin: 0 auto;
@@ -211,6 +368,36 @@ img{
 .lineFooter{
 	border: 0.5px solid #C70039;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* .userMessage style */
+.userMessage{
+	position: relative;	
+	margin: 5px;	
+	color: #000000;
+    border-radius: 2px;
+	padding: 5px 5px;
+	background: #FFFFFF;
+	border: 0.5px solid #C70039;
+}
+/* .messageContent style */
+.messageContent{
+	background: #FFFFFF;
+	display: block;
+	margin: 0 auto;
+	height: 250px;
+	max-height: 280px;
+	overflow-y: scroll;
+	padding: 10px 0px;
+}
+/* .black style */
+.black{
+	color: #000000;
+}
+/* .smallButton style */
+=======
+>>>>>>> UserService
 /* .chatboxContent style */
 >>>>>>> UserService
 .chatboxContent{
@@ -256,6 +443,10 @@ img{
 }
 /* .smallButton style */
 >>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 .smallButton{
 	margin: 0 auto;
 	margin-top: 15px;
@@ -267,9 +458,19 @@ img{
 	overflow: hidden;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* .button style */
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 /* .button style */
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 .button{
     display: block;
@@ -285,15 +486,31 @@ img{
 	overflow: hidden;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 .button:hover, .smallButton:hover{
 	color: #000000;
 	background: #FFFFFF;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 /* .button:hover, .smallButton:hover style */
 .button:hover, .smallButton:hover{
 	color: #000000;
 	background: #FFFFFF;
 	border: 1px solid #FFFFFF; 
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 }

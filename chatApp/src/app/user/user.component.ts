@@ -1,9 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from './user.service';
+//Component
+=======
+>>>>>>> UserService
 import { UserService } from './user.service';
 <<<<<<< HEAD
 
 =======
 //Component
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 @Component({
   selector: 'app-user',
@@ -11,6 +24,20 @@ import { UserService } from './user.service';
   styleUrls: ['./user.component.css']
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+//Class UserComponent
+export class UserComponent implements OnInit{
+     users; 
+	 username:string = '';
+     email:string = '';
+     checkIFSuperAdmin:boolean = false;	 	 
+	 login:boolean = false;
+	 //Constructor
+     constructor(private router:Router, private form:FormsModule, private userServ: UserService){
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 export class UserComponent implements OnInit{
      users;     
      constructor(private userServ: UserService){
@@ -46,6 +73,10 @@ export class UserComponent implements OnInit{
 	 login:boolean = false;
 	 //Constructor
      constructor(private userServ: UserService){
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 	 }
      //Init
      ngOnInit(){
@@ -88,6 +119,16 @@ export class UserComponent implements OnInit{
 	 }
 	 //Create User
 	 createUser(username, email){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		 var ug = document.getElementById('username');
+		 var eg =  document.getElementById('email');
+		 var fa = document.getElementById('fail');
+		 //user
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 		 var user = {
 			 username: username,
 			 email: email
@@ -95,9 +136,26 @@ export class UserComponent implements OnInit{
 		 this.userServ.createUser(user).subscribe(
 		     data => { 
                  this.getUsers();
+<<<<<<< HEAD
                  return true;
              },
              err => {
+=======
+<<<<<<< HEAD
+				 console.log('User is created');
+				 this.username = '';
+                 this.email = '';
+                 return true;
+             },
+             err => {
+				 eg.style.border = '2px solid #C70039';
+			     ug.style.border = '2px solid #C70039';
+=======
+                 return true;
+             },
+             err => {
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
                  console.error(err);
              }
 		 );
@@ -105,6 +163,13 @@ export class UserComponent implements OnInit{
 	 //Update User
 	 updateUser(user){
 		 this.userServ.updateUser(user).subscribe(
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
              data => { 
                  this.getUsers();
@@ -112,6 +177,31 @@ export class UserComponent implements OnInit{
              },
              err => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                 console.error('Error Saving User.');
+             }
+         );
+	 }	
+	 //Delete User
+	 deleteUser(user){
+		 this.userServ.updateUser(user).subscribe(
+             data => { 
+                 this.getUsers();
+                 return true;
+             },
+             err => {
+                 console.error('Error Saving User.');
+             }
+         );
+	 }
+     //Sign In
+	 signin(){	 
+         this.router.navigateByUrl('/login');
+     } 	 
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
                  console.error(err);
 =======
                  console.error('Error Saving User.');
@@ -119,4 +209,8 @@ export class UserComponent implements OnInit{
              }
          );
 	 }	 
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 }

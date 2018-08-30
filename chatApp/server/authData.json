@@ -1,5 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+[{"userID":1,"username":"Super","email":"super@hotmail.com","password":"star","age":22,"birthday":"07/01/1996"},
+{"userID":2,"username":"Allen","email":"allen@hotmail.com","password":"wars","age":19,"birthday":"20/09/1999"},
+{"userID":3,"username":"Ritchie","email":"someone@hotmail.com","password":"pass","age":20,"birthday":"11/07/1998"},
+{"userID":4,"username":"Alex","email":"alexjones@gmail.com","password":"frogs","age":44,"birthday":"02/11/1974"},
+{"userID":5,"username":"Kaitlyn","email":"kaitlyn@gmail.com","password":"shera","age":24,"birthday":"06/06/1994"},
+{"userID":6,"username":"Joe","email":"rogan@gmail.com","password":"fearfactor","age":51,"birthday":"15/09/1967"},
+{"userID":7,"username":"Terry","email":"terry@gmail.com","password":"apples","age":23,"birthday":"21/12/1995"}]
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 [{'name':'Super', 'name': 'Ritchie', 'name': 'John', 'name': 'Jim'}]
 =======
 [{"userID":1,"username":"Super","email":"super@hotmail.com","password":"star","age":22,"birthday":"07/01/1996"},{"userID":2,"username":"Allen","email":"allen@hotmail.com","password":"wars","age":19,"birthday":"20/09/1999"},{"userID":3,"username":"Ritchie","email":"someone@hotmail.com","password":"pass","age":20,"birthday":"11/07/1998"},{"userID":4,"username":"Alex","email":"alexjones@gmail.com","password":"frogs","age":44,"birthday":"02/11/1974"},{"userID":5,"username":"Kaitlyn","email":"kaitlyn@gmail.com","password":"shera","age":24,"birthday":"06/06/1994"},{"userID":6,"username":"Joe","email":"rogan@gmail.com","password":"fearfactor","age":51,"birthday":"15/09/1967"},{"userID":7,"username":"Terry","email":"terry@gmail.com","password":"apples","age":23,"birthday":"21/12/1995"},{}]
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService

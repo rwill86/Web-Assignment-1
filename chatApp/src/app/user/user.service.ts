@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 
@@ -33,6 +38,10 @@ export class UserService{
          return this.http.delete('/api/auth/' + user.id);
      }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -48,8 +57,17 @@ const httpOptions = {
 export class UserService{
 	 checking:string;
 	 //Constructor
+<<<<<<< HEAD
      constructor(private http:HttpClient){
 		 
+=======
+<<<<<<< HEAD
+     constructor(private http:HttpClient){	 
+=======
+     constructor(private http:HttpClient){
+		 
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 	 }		 
 	 //Get Users
 	 public getUsers(){
@@ -73,5 +91,12 @@ export class UserService{
 	 public loginUser(username:string, email:string){
 		 return this.http.post('/api/auth', {username: username, email: email});
 	 }
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 }

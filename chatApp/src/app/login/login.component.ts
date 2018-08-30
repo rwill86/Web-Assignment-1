@@ -2,10 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { UserService } from '../user/user.service';
+//Component
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 import { UserService } from '../user/user.service';
 //Component
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 @Component({
   selector: 'app-login',
@@ -13,6 +24,11 @@ import { UserService } from '../user/user.service';
   styleUrls: ['./login.component.css']
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 export class LoginComponent implements OnInit{
      username:string = '';
@@ -30,6 +46,10 @@ export class LoginComponent implements OnInit{
      }
 	 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 //Class LoginComponent
 export class LoginComponent implements OnInit{
      username:string = '';
@@ -58,6 +78,15 @@ export class LoginComponent implements OnInit{
 		 }
      }
 	 //Login User 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	 loginUser(event){
+	     event.preventDefault();
+		 var ug = document.getElementById('username');
+		 var eg =  document.getElementById('email');
+=======
+>>>>>>> UserService
 >>>>>>> UserService
 	 loginUser(event){
 	     event.preventDefault();
@@ -86,6 +115,10 @@ export class LoginComponent implements OnInit{
 	 logout(){	 	 
 	     sessionStorage.clear();
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 		 var fa = document.getElementById('fail');
 		 
 		 this.userServ.loginUser(this.username, this.email).subscribe(
@@ -112,6 +145,13 @@ export class LoginComponent implements OnInit{
 	     //clear storage	
 	     sessionStorage.clear();
 		 localStorage.clear();
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 		 location.reload();
      }

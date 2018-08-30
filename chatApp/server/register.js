@@ -1,5 +1,10 @@
 module.exports = function(app, fs){
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 	 app.get('/api/reg', (req, res) => {
 		 var user = 0;
 	     var username = req.query.username;
@@ -18,6 +23,10 @@ module.exports = function(app, fs){
 						 //res.send({'username':username, 'success':true});
 						 //return;
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 	 //Route to manage user logins
 	 app.get('/api/reg', (req, res) => {
 		 var user = 0;
@@ -35,12 +44,24 @@ module.exports = function(app, fs){
 					 if(userObject[i].username == username){
 						 //Check for duplicates users
 						 user = 1;
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 					 }
 				 }
 		     }
 			 if(user > 0){
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 				 //already exist
 				 res.send({'username':'','sucess':false});
 			 }else{
@@ -54,6 +75,10 @@ module.exports = function(app, fs){
 			 }
 		 } 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 				 //username already exist in the file
 				 res.send({'username':'','success':false});
 			 }else{
@@ -69,6 +94,13 @@ module.exports = function(app, fs){
 				 });
 			 }
 		 });
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 	 });
 };

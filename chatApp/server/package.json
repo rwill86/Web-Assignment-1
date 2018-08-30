@@ -11,8 +11,18 @@
   "dependencies": {
     "body-parser": "^1.18.3",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "cors": "^2.8.4",
+>>>>>>> UserService
+=======
+    "cors": "^2.8.4",
+=======
+<<<<<<< HEAD
+=======
+    "cors": "^2.8.4",
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
     "express": "^4.16.3",
     "nodemon": "^1.18.3",

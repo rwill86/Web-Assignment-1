@@ -1,8 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+//Component
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 
 =======
 //Component
+>>>>>>> UserService
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 @Component({
   selector: 'app-menu',
@@ -10,6 +20,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> UserService
 export class MenuComponent implements OnInit {
 
   constructor() { }
@@ -18,6 +33,10 @@ export class MenuComponent implements OnInit {
   }
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
+>>>>>>> UserService
 export class MenuComponent implements OnInit{
      //Constuctor
      constructor(){
@@ -25,5 +44,12 @@ export class MenuComponent implements OnInit{
      //Init
      ngOnInit(){
      }
+<<<<<<< HEAD
+>>>>>>> UserService
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> UserService
+>>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
 >>>>>>> UserService
 }
