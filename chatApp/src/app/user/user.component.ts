@@ -1,83 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
 //Component
-=======
->>>>>>> UserService
-import { UserService } from './user.service';
-<<<<<<< HEAD
-
-=======
-//Component
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 //Class UserComponent
 export class UserComponent implements OnInit{
-     users; 
-	 username:string = '';
-     email:string = '';
-     checkIFSuperAdmin:boolean = false;	 	 
-	 login:boolean = false;
+     public users; 
+	 public username:string = '';
+     public email:string = '';
+     public checkIFSuperAdmin:boolean = false;	 	 
+	 public login:boolean = false;
 	 //Constructor
      constructor(private router:Router, private form:FormsModule, private userServ: UserService){
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-export class UserComponent implements OnInit{
-     users;     
-     constructor(private userServ: UserService){
-	 }
-
-     ngOnInit(){
-		 this.getUsers();
      }
-	 
-	 getUsers(){
-		 this.userServ.getUsers().subscribe(
-		     data => {this.user = data}.
-			 err => console.error(err),
-			 () = > console.log('done loading')
-		 );
-	 }
-	 
-	 createUser(username, password){
-		 var user = {
-			 username: username,
-			 passowrd: password
-		 }
-	 }
-	 
-	 updateUser(user){
-		 this.userServ.updateStudent(users).subscribe(
-=======
-//Class UserComponent
-export class UserComponent implements OnInit{
-     users; 
-     checkIFSuperAdmin:boolean;	 
-	 checkIFGroupAdmin:boolean;	 
-	 login:boolean = false;
-	 //Constructor
-     constructor(private userServ: UserService){
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
-	 }
      //Init
      ngOnInit(){
 		 this.getUsers();
@@ -119,67 +59,45 @@ export class UserComponent implements OnInit{
 	 }
 	 //Create User
 	 createUser(username, email){
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
 		 var fa = document.getElementById('fail');
-		 //user
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 		 var user = {
 			 username: username,
 			 email: email
 		 }
-		 this.userServ.createUser(user).subscribe(
-		     data => { 
-                 this.getUsers();
-<<<<<<< HEAD
-                 return true;
-             },
-             err => {
-=======
-<<<<<<< HEAD
-				 console.log('User is created');
-				 this.username = '';
-                 this.email = '';
-                 return true;
-             },
-             err => {
-				 eg.style.border = '2px solid #C70039';
-			     ug.style.border = '2px solid #C70039';
-=======
-                 return true;
-             },
-             err => {
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
-                 console.error(err);
-             }
-		 );
+		 //check if inputs are not null
+         if(this.username !== '' || this.email !== ''){
+		     this.userServ.createUser(user).subscribe(
+		         data => { 
+                     this.getUsers();
+				     console.log('User is created');
+				     this.username = '';
+                     this.email = '';
+                     return true;
+                 },
+                 err => {
+				     eg.style.border = '2px solid #C70039';
+			         ug.style.border = '2px solid #C70039';
+					 fa.innerHTML = 'UserName and Email were incorrect.';
+                     console.error(err);
+                 }
+		     );
+		 } else{
+			 eg.style.border = '2px solid #C70039';
+			 ug.style.border = '2px solid #C70039';
+			 fa.innerHTML = 'UserName and Email were incorrect.';
+		 }
 	 }
 	 //Update User
 	 updateUser(user){
 		 this.userServ.updateUser(user).subscribe(
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-=======
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
              data => { 
                  this.getUsers();
                  return true;
              },
              err => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                 console.error('Error Saving User.');
+                 console.error('Error Saving a User.');
              }
          );
 	 }	
@@ -191,7 +109,7 @@ export class UserComponent implements OnInit{
                  return true;
              },
              err => {
-                 console.error('Error Saving User.');
+                 console.error('Error Deleting a User.');
              }
          );
 	 }
@@ -199,18 +117,4 @@ export class UserComponent implements OnInit{
 	 signin(){	 
          this.router.navigateByUrl('/login');
      } 	 
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-                 console.error(err);
-=======
-                 console.error('Error Saving User.');
->>>>>>> UserService
-             }
-         );
-	 }	 
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 }

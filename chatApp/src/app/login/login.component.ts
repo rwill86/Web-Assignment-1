@@ -1,60 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { UserService } from '../user/user.service';
 //Component
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-import { UserService } from '../user/user.service';
-//Component
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-export class LoginComponent implements OnInit{
-     username:string = '';
-     email:string = '';
-	 login:string;
-     constructor(private router:Router, private form:FormsModule){ 
-	 }
-
-     ngOnInit(){
-		 if(!sessionStorage.getItem('userName')){
-			 sessionStorage.clear();
-		 } else{
-			 this.login = 'login'
-		 }
-     }
-	 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 //Class LoginComponent
 export class LoginComponent implements OnInit{
-     username:string = '';
-     email:string = '';
-	 login:boolean = false;
+     public username:string = '';
+     public email:string = '';
+	 public login:boolean = false;
 	 //Constructor
      constructor(private router:Router, private form:FormsModule, private userServ:UserService){ 
 	 }
@@ -78,81 +36,49 @@ export class LoginComponent implements OnInit{
 		 }
      }
 	 //Login User 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	 loginUser(event){
-	     event.preventDefault();
-		 var ug = document.getElementById('username');
-		 var eg =  document.getElementById('email');
-=======
->>>>>>> UserService
->>>>>>> UserService
 	 loginUser(event){
 	     event.preventDefault();
 		 var message = document.getElementById('message');
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
-<<<<<<< HEAD
-	     if(this.email != '' || this.username != ''){
-		     localStorage.setItem('loggedIn', '1');
-			 localStorage.setItem('userName', this.username);
-		     sessionStorage.setItem('userID', '1');
-	         sessionStorage.setItem('userName', this.username);
-	         sessionStorage.setItem('birthday', '11/08/1998');
-			 sessionStorage.setItem('email', this.email);
-		     sessionStorage.setItem('age', '20');
-			 eg.style.border = '';
-			 ug.style.border = '';
-		     this.router.navigateByUrl('/account');
-	     } else{
-			 eg.style.border = '2px solid #C70039';
-			 ug.style.border = '2px solid #C70039';
-		     console.log('UserName and email were incorrect. \nUserName:' + this.username + '\nPassword:' + this.email);
-		 }
-     }
-	 
-	 logout(){	 	 
-	     sessionStorage.clear();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 		 var fa = document.getElementById('fail');
 		 
-		 this.userServ.loginUser(this.username, this.email).subscribe(
-		     data => {
-				 localStorage.setItem('userName', this.username);
-				 sessionStorage.setItem('userName', this.username);
-				 sessionStorage.setItem('email', this.email);
-				 console.log('User is Login');
-				 eg.style.border = '';
-			     ug.style.border = '';
-				 this.router.navigateByUrl('/account');
-			 },
-			 error => {
-				 eg.style.border = '2px solid #C70039';
-			     ug.style.border = '2px solid #C70039';
-				 console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
-				 fa.innerHTML = 'UserName and Email were incorrect.';
-				 this.login = false;
-			 }
-	     );
+		 //check if inputs are not null
+         if(this.username !== '' || this.email !== ''){
+		     this.userServ.loginUser(this.username, this.email).subscribe(
+		         data => {
+				     localStorage.setItem('userName', this.username);
+				     sessionStorage.setItem('userName', this.username);
+				     sessionStorage.setItem('email', this.email);
+					 //sessionStorage.setItem('userID', data.userID);
+					 //sessionStorage.setItem('birthday', data.birthday);
+					 //sessionStorage.setItem('age', data.age);
+				     console.log('User is Login');
+				     eg.style.border = '';
+			         ug.style.border = '';
+				     this.router.navigateByUrl('/account');
+			     },
+			     error => {
+				     eg.style.border = '2px solid #C70039';
+			         ug.style.border = '2px solid #C70039';
+				     console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
+				     fa.innerHTML = 'UserName and Email were incorrect.';
+				     this.login = false;
+			     }
+	         );
+		 } else{
+			 eg.style.border = '2px solid #C70039';
+			 ug.style.border = '2px solid #C70039';
+		     console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
+		     fa.innerHTML = 'UserName and Email were incorrect.';
+		     this.login = false;
+		 }
      }
 	 //Logout User
 	 logout(){	 	 
 	     //clear storage	
 	     sessionStorage.clear();
 		 localStorage.clear();
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-=======
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 		 location.reload();
      }
 }

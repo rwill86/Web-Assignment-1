@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 //Component
 @Component({
-  selector: 'app-notfound',
-  templateUrl: './notfound.component.html',
-  styleUrls: ['./notfound.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-//Class NotfoundComponent
-export class NotfoundComponent implements OnInit{
+//Class HomeComponent
+export class HomeComponent implements OnInit{
 	 public login:boolean = false;
-	 //Constructor
-     constructor(){ 
+     //Constructor
+     constructor(private router:Router, private form:FormsModule){ 
 	 }
      //Init
      ngOnInit(){
@@ -25,9 +27,11 @@ export class NotfoundComponent implements OnInit{
 				 sessionStorage.setItem('userName', usern);
 				 this.login = true;
 				 console.log('LocalStorage Exist');
-			 } else{
-				 this.login = false;
-			 }
-		 }
+			 } 	
+         }			 
      }
+	 //Sign In
+	 signin(){	 
+         this.router.navigateByUrl('/login');
+     } 
 }

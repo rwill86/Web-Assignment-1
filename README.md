@@ -1,11 +1,5 @@
 # Assignment-1
 ## Version
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> UserService
 Version 0.1
 ## Description 
 This is a chat application that allows the user to login and chat with other online-users.
@@ -22,38 +16,3 @@ Run the NODE.JS server ```Node server.js```. Navigate to url ```http://localhost
 Unknown errors in program so far.
 ## Author
 Ritchie Wils, s2967766
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
-```
-Version 0.1
-## Description 
-```
-This is a chat application that allows the user to login and chat with other online-users.
-## 	Install Instructions
-```
-git init
-git clone https://github.com/rwill86/Assignment-1.git
-node npm i
-## 	Run Instructions
-```
-Node server.js
-Open up browser and enter this url http://localhost:3000
-## Error Notes
-```
-Unknown errors in program
-## Author
-```
-<<<<<<< HEAD
-Ritchie Wils, s2967766
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-Ritchie Wils, s2967766
-=======
-Ritchie Wils, s2967766
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService

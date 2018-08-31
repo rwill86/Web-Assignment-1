@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* style.css */
 /* html style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-/* style.css */
-/* html style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 html, body{
     margin: 0px; 
     padding: 0px;	
@@ -24,41 +10,11 @@ html, body{
     font-family: Geneva, sans-serif, MS PGothic, Hiragino Kaku Gothic Pro;
     background: #202020;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* a style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* a style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 a{
     color: #F5F5F5;
     text-decoration: none;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-a:hover{
-    color: #C70039;	
-}
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 /* a:hover style */
 a:hover{
     color: #C70039;	
@@ -69,14 +25,6 @@ img{
 	height: 100%;
 }
 /* .wrap style */
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-=======
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .wrap{
 	width: 90%;
 	max-width: 1550px;
@@ -85,21 +33,8 @@ img{
 	padding: 0px;
 	padding-top: 90px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* .nav style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
 
-=======
 /* .nav style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .nav{
 	position: relative;
 	margin: 0 auto;
@@ -112,21 +47,8 @@ img{
 	text-align: center;
 	overflow: hidden;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* .linkContent a style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
 
-=======
 /* .linkContent a style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .linkContent a{
 	margin: 5px;
 	padding: 10px;
@@ -138,17 +60,6 @@ img{
 	border: 1px solid #141618;
 	border-radius: 2px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 /* .linkContent a:hover style */
 .linkContent a:hover{
 	color: #000000;
@@ -165,35 +76,22 @@ img{
 	border: 1px solid #C70039;
 	border-radius: 2px;
 }
+/* .logo style */
+.logo a{
+	display: block;
+	width: 200px;
+	height: 120px;
+	color: #FFFFFF;
+	border: 1px solid #C70039;
+	border-radius: 2px;
+}
 /* .linkContent a .current style */
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-=======
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .linkContent a .current{
 	color: #C70039;
 	background: #C70039;
 	background: #C70039;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .mainContent style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .mainContent style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .mainContent{
 	position: relative;
 	margin: 0 auto;
@@ -202,21 +100,7 @@ img{
 	background: #080808;
 	border: 0.5px solid #000000;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .signContent style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .signContent style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .signContent{
     position: relative;
     margin: 0 auto;
@@ -227,137 +111,42 @@ img{
     border-radius: 2px;
 	border: 0.5px solid #000000;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .subContent{ style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .subContent{ style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .subContent{
     display: block;
 	margin: 0 auto;
 	padding: 10px 0px;
 	overflow: hidden;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> UserService
 
 .input{
 	width: 100%;
 	padding: 5px;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
-/* .input style */
-.input{
-	width: 100%;
-	padding: 5px;
 	color: #000000;
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-=======
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 	box-sizing: border-box;
 	border-radius: 2px;
 	margin-bottom: 10px;
     border: 0.5px solid #DCDCDC; 
 	box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .h1 style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .h1 style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .h1{
     margin: 0 auto;
 	font-size: 55px;
 	padding: 0px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .h3 style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .h3 style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .h3{
     margin: 0 auto;
 	font-size: 20px;
 	color: #696969; 
 	padding: 0px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .p style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .p style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .p{
 	margin: 0 auto;
 	padding: 0px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-.lineFooter{
-	border: 0.5px solid #C70039;
-}
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 /* .error style */
 .error{
 	margin: 0 auto;
@@ -368,9 +157,6 @@ img{
 .lineFooter{
 	border: 0.5px solid #C70039;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 /* .userMessage style */
 .userMessage{
 	position: relative;	
@@ -395,58 +181,11 @@ img{
 .black{
 	color: #000000;
 }
-/* .smallButton style */
-=======
->>>>>>> UserService
-/* .chatboxContent style */
->>>>>>> UserService
-.chatboxContent{
-    position: relative;
-	margin: 0 auto;
-	width: 100%;
-	height: auto;
-    min-height: 30px;
-	padding: 10px;
-	background: #F5F5F5;
-	border: 0.5px solid #DCDCDC;
-    border-radius: 2px	
-}
-<<<<<<< HEAD
-
-img{
-	width: 100%;
-	height: 100%;
-}
-
-=======
-/* .userMessage style */
->>>>>>> UserService
-.userMessage{
-	position: relative;	
-	margin: 5px;
-	
-    border-radius: 2px;
-	padding: 10px 5px;
-	background: #000000;
-	border: 0.5px solid #C70039;
-}
-<<<<<<< HEAD
-
-.white{
-	background: #FFFFFF;
-}
-
-=======
 /* .white style */
 .white{
 	background: #FFFFFF;
 }
 /* .smallButton style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .smallButton{
 	margin: 0 auto;
 	margin-top: 15px;
@@ -457,21 +196,7 @@ img{
 	cursor: pointer;
 	overflow: hidden;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 /* .button style */
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-=======
-/* .button style */
->>>>>>> UserService
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 .button{
     display: block;
     width: 100%;
@@ -485,32 +210,9 @@ img{
 	cursor: pointer;
 	overflow: hidden;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> UserService
-
-.button:hover, .smallButton:hover{
-	color: #000000;
-	background: #FFFFFF;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 /* .button:hover, .smallButton:hover style */
 .button:hover, .smallButton:hover{
 	color: #000000;
 	background: #FFFFFF;
 	border: 1px solid #FFFFFF; 
-<<<<<<< HEAD
->>>>>>> UserService
-=======
-<<<<<<< HEAD
-=======
->>>>>>> UserService
->>>>>>> 0e0bcc87af02ceb835be39578bf524bd7267fb4f
->>>>>>> UserService
 }
