@@ -8,7 +8,7 @@ module.exports = function(app, path){
          { userID:4, username:'Alex', email:'alexjones@gmail.com', age:44, birthday:'02/11/1974', pass:'frogs', type:'Group' }
      ];
 	 //Get users Api
-	 app.get('/api/auth', function (req, res) {
+	 app.get('/api/auths', function (req, res) {
          res.send(users);
      });
 	 //Post new user Api
@@ -41,23 +41,23 @@ module.exports = function(app, path){
 		 console.log('Delete user.');
      });
      //get /
-     app.get('/', function (req, res) {
+     app.get('/', function (req, res){
          res.sendFile(path.join(__dirname,'../dist/chatApp/index.html'))
      });
 	 //get /login
-	 app.get('/login', function (req, res) {
+	 app.get('/login', function (req, res){
          res.sendFile(path.join(__dirname,'../dist/chatApp/index.html'))
      });
 	 //get /account
-	 app.get('/account', function (req, res) {
+	 app.get('/account', function (req, res){
          res.sendFile(path.join(__dirname,'../dist/chatApp/index.html'))
      });
 	 //get /home
-	 app.get('/home', function (req, res) {
+	 app.get('/home', function (req, res){
          res.sendFile(path.join(__dirname,'../dist/chatApp/index.html'))
      });
 	 //get /chat
-     app.get('/chat', function (req, res) {
+     app.get('/chat', function (req, res){
          res.sendFile(path.join(__dirname,'../dist/chatApp/index.html'))
      });
 	 //get /user

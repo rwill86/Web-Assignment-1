@@ -1,19 +1,20 @@
 <!-- main content -->
 <div class="mainContent">     
-	 <div class="h1">User List</div>
+	 <div class="h1">Users</div>
 	 <div class="lineFooter"></div>	
      <div class="subContent" *ngIf="!login">
 	     <div class="p">Sign in if you're a super adim or group adim to be able to use this page.</div>
 		 <button (click)="signin()" type="submit" name="submit" class="smallButton">Sign In</button>
      </div>	 
-	 <div class="subContent" *ngIf="!login">
+	 <div class="subContent" *ngIf="!checkIFSuperAdmin">
 	     <div class="p">Your not a Super Admin.</div>
 	 </div>
-	 <div class="subContent" *ngIf="login">
+	 <div class="subContent" *ngIf="checkIFSuperAdmin">
          <div class="userList" *ngFor="let user of users;"> 
-             <div class="p">UserName: {{user.username}}</div>
+		     <div class="h3">UserID: {{user.userID}}</div>
+             <div class="p">UserName: {{user.userID}}</div>
 	         <input type="text" class="input" name="username" [(ngModel)]="user.username" placeholder="{{user.username}}"/>
-			 <div class="p">Email: {{user.email}}</div>
+			 <div class="p">Email:</div>
 	         <input type="email" class="input" name="email" [(ngModel)]="user.email" placeholder="{{user.email}}"/>
 		     <button (click)="updateUser(user)" type="submit" name="submit" class="smallButton"><i class="fas fa-save"></i> Save</button>
              <button (click)="deleteUser(user)" type="submit" name="submit" class="smallButton"><i class="fas fa-trash-alt"></i> Delete</button>

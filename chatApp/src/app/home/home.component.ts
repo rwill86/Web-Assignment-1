@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit{
 	 public login:boolean = false;
      //Constructor
-     constructor(private router:Router, private form:FormsModule){ 
+     public constructor(private router:Router, private form:FormsModule){ 
 	 }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
 		 if(!sessionStorage.getItem('userName')){
 			 console.log('Not validated.');
 			 sessionStorage.clear();
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit{
          }			 
      }
 	 //Sign In
-	 signin(){	 
+	 public signin(){	 
          this.router.navigateByUrl('/login');
      } 
 }

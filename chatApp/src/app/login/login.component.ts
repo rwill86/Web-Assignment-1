@@ -14,10 +14,10 @@ export class LoginComponent implements OnInit{
      public email:string = '';
 	 public login:boolean = false;
 	 //Constructor
-     constructor(private router:Router, private form:FormsModule, private userServ:UserService){ 
+     public constructor(private router:Router, private form:FormsModule, private userServ:UserService){ 
 	 }
      //Init 
-     ngOnInit(){
+     public ngOnInit(){
 		 if(!sessionStorage.getItem('userName')){
 			 console.log('Not validated.');
 			 sessionStorage.clear();
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
 		 }
      }
 	 //Login User 
-	 loginUser(event){
+	 public loginUser(event){
 	     event.preventDefault();
 		 var message = document.getElementById('message');
 		 var ug = document.getElementById('username');
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit{
 		 }
      }
 	 //Logout User
-	 logout(){	 	 
+	 public logout(){	 	 
 	     //clear storage	
 	     sessionStorage.clear();
 		 localStorage.clear();

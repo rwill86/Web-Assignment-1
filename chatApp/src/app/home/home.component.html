@@ -6,4 +6,7 @@
 	     <div class="p">Login to continue.</div>
 		 <button (click)="signin()" type="submit" name="submit" class="smallButton">Sign In</button>
 	 </div>
+	 <div class="subContent" *ngIf="login">
+	     <div class="p">You are sign in.</div>
+	 </div>
 </div>

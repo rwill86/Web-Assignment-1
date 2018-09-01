@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 //Class MenuComponent
 export class MenuComponent implements OnInit{
      //Constuctor
-     constructor(){
+     public constructor(){
 	 }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
      }
 
 }

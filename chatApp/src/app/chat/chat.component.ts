@@ -17,11 +17,13 @@ export class ChatComponent implements OnInit{
 	 public userName:string;
 	 public connection;
 	 public login:boolean = false;
+	 public admin:string;
+	 public checkIFGroupAdmin:boolean = false;
 	 //Constructor
-     constructor(private router:Router, private sockServ:SocketService){	  
+     public constructor(private router:Router, private sockServ:SocketService){	  
      }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
 		 if(!sessionStorage.getItem('userName')){
 			 console.log('Not validated');
 			 sessionStorage.clear();
@@ -45,8 +47,21 @@ export class ChatComponent implements OnInit{
 			 });
 		 }
      }
+	 //Check Admin
+	 public CheckAdmin(){
+		 //Check if sessionStorage is super admin
+		 if(sessionStorage.getItem('userName') == 'Super' || sessionStorage.getItem('userName') == 'super'){
+			 this.checkIFGroupAdmin = false;
+			 console.log('super admin');
+		     this.admin = 'Super';
+		 } else{
+			 this.checkIFGroupAdmin = true;
+		     console.log('group admin');
+		     this.admin = 'Group';
+		 }
+	 }
      //SendMessage
-	 sendMessage(){
+	 public sendMessage(){
 		 if(this.message !== ''){
 		     var d = new Date();
 		     var h = d.getHours();
@@ -57,14 +72,26 @@ export class ChatComponent implements OnInit{
 			 me.style.border = '2px solid #C70039';
 		 }
 	 }
+	 //Add Channel
+	 public addChannel(){		 
+	 }
+	 //Add Channel
+	 public removeChannel(){		 
+	 }	 
+	 //Add user
+	 public addUser(){		 
+	 }
+	 //remove User
+	 public removeUser(){		 
+	 }
 	 //Destory ng 
-	 ngOnDestory(){
+	 public ngOnDestory(){
 		 if(this.connection){
 			 this.connection.unsubscribe();
 		 }
 	 }
 	 //Sign in
-	 signin(){	 
+	 public signin(){	 
          this.router.navigateByUrl('/login');
      } 
 }

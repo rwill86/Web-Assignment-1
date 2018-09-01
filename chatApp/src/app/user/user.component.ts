@@ -13,13 +13,14 @@ export class UserComponent implements OnInit{
      public users; 
 	 public username:string = '';
      public email:string = '';
+	 public admin:string;
      public checkIFSuperAdmin:boolean = false;	 	 
 	 public login:boolean = false;
 	 //Constructor
-     constructor(private router:Router, private form:FormsModule, private userServ: UserService){
+     public constructor(private router:Router, private form:FormsModule, private userServ:UserService){
      }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
 		 this.getUsers();
 		 if(!sessionStorage.getItem('userName')){
 			 console.log('Not validated.');
@@ -27,13 +28,7 @@ export class UserComponent implements OnInit{
 			 this.login = false;
 			 //this.router.navigateByUrl('/login');
 		 } else{
-			  //Check if sessionStorage is super admin
-			 if(sessionStorage.getItem('userName') == 'super'){
-			     this.checkIFSuperAdmin = true;
-			     console.log('super admin');
-		     } else{
-			     this.checkIFSuperAdmin = false;
-		     }
+			 this.CheckAdmin();
 			 //Check if localStorage exist for username
 			 if(localStorage.getItem('userName')){
 				 //start session
@@ -46,19 +41,31 @@ export class UserComponent implements OnInit{
 			 }
 		 }
      }
+	 //Check Admin
+	 public CheckAdmin(){
+		 //Check if sessionStorage is super admin
+		 if(sessionStorage.getItem('userName') == 'Super' || sessionStorage.getItem('userName') == 'super'){
+			 this.checkIFSuperAdmin = true;
+			 console.log('super admin');
+			 this.admin = 'Super';
+		 } else{
+		     this.checkIFSuperAdmin = false;
+			 console.log('group admin');
+		     this.admin = 'Group';
+		 }
+	 }
 	 //Get User
-	 getUsers(){
+	 public getUsers(){
 		 this.userServ.getUsers().subscribe(
 		     data => {
 				 this.users = data;
 			 },
-			 err => {
-				 console.error(err);
-			 }	 
+			 err => console.error(err),
+             () => console.log('done loading users')			 
 		 );
 	 }
 	 //Create User
-	 createUser(username, email){
+	 public createUser(username, email){
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
 		 var fa = document.getElementById('fail');
@@ -90,10 +97,11 @@ export class UserComponent implements OnInit{
 		 }
 	 }
 	 //Update User
-	 updateUser(user){
+	 public updateUser(user){
 		 this.userServ.updateUser(user).subscribe(
              data => { 
                  this.getUsers();
+				 console.log('Saving a user.');
                  return true;
              },
              err => {
@@ -102,10 +110,11 @@ export class UserComponent implements OnInit{
          );
 	 }	
 	 //Delete User
-	 deleteUser(user){
-		 this.userServ.updateUser(user).subscribe(
+	 public deleteUser(user){
+		 this.userServ.deleteUser(user).subscribe(
              data => { 
                  this.getUsers();
+				 console.log('Deleting a user.');
                  return true;
              },
              err => {
@@ -114,7 +123,7 @@ export class UserComponent implements OnInit{
          );
 	 }
      //Sign In
-	 signin(){	 
+	 public signin(){	 
          this.router.navigateByUrl('/login');
      } 	 
 }

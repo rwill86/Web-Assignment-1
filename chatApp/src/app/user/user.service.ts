@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+//import { User } from '../user/user.model';
 //HttpOptions
 const httpOptions = {
      headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -10,14 +11,19 @@ const httpOptions = {
 @Injectable({
      providedIn: 'root'
 })
+//interfect user
+//export interface user{
+	 //username:string;
+	 //email:string;
+//}
 //Class UserService
 export class UserService{
 	 //Constructor
-     constructor(private http:HttpClient){		 
+     public constructor(private http:HttpClient){		 
 	 }		 
 	 //Get Users
 	 public getUsers(){
-		 return this.http.get('http://localhost:3000/api/auth');
+		 return this.http.get('http://localhost:3000/api/auths');
 	 }
 	 //Create Users
 	 public createUser(user){
@@ -27,7 +33,7 @@ export class UserService{
 	 //Update Users
 	 public updateUser(user){
          var body = JSON.stringify(user);
-         return this.http.post('http://localhost:3000/api/auth/' + user.userID, body, httpOptions);
+         return this.http.put('http://localhost:3000/api/auth/' + user.userID, body, httpOptions);
      }
 	 //Delete Users
 	 public deleteUser(user){

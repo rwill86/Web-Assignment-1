@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 //Class SocketComponent
 export class SocketComponent implements OnInit{
 	 //Constructor
-     constructor(){ 
+     public constructor(){ 
 	 }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
      }
 }

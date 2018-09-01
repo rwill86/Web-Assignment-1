@@ -14,15 +14,15 @@ export class AccountComponent implements OnInit{
 	 public username:string;
 	 public birthday:string;
 	 public email:string;
-	 public admin:string
+	 public admin:string;
 	 public age:string;
 	 public login:boolean = false;
 	 public checkIFSuperAdmin:boolean = false;	 	
 	 //Constructor
-     constructor(private router:Router, private form:FormsModule){ 
+     public constructor(private router:Router, private form:FormsModule){ 
      }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
 		 if(!sessionStorage.getItem('userName')){
 			 console.log('Not validated.');
 			 sessionStorage.clear();
@@ -36,21 +36,25 @@ export class AccountComponent implements OnInit{
 				 this.login = true;
 				 console.log('LocalStorage Exist');
 			 } 			 
-			  //Check if sessionStorage is super admin
-			 if(sessionStorage.getItem('userName') == 'Super' || sessionStorage.getItem('userName') == 'super'){
-			     this.checkIFSuperAdmin = true;
-			     console.log('super admin');
-				 this.admin = 'Super';
-		     } else{
-			     this.checkIFSuperAdmin = false;
-				 console.log('group admin');
-				 this.admin = 'Group';
-		     }
+			 this.CheckAdmin();
 			 this.getData();
 		 }
      }
+	 //Check Admin
+	 public CheckAdmin(){
+		 //Check if sessionStorage is super admin
+		 if(sessionStorage.getItem('userName') == 'Super' || sessionStorage.getItem('userName') == 'super'){
+			 this.checkIFSuperAdmin = true;
+			 console.log('super admin');
+		     this.admin = 'Super';
+		 } else{
+			 this.checkIFSuperAdmin = false;
+		     console.log('group admin');
+		     this.admin = 'Group';
+		 }
+	 }
 	 //getData
-	 getData(){
+	 public getData(){
 		 this.userID = sessionStorage.getItem('userID');
 	     this.username = sessionStorage.getItem('userName');
 		 this.birthday = sessionStorage.getItem('birthday');
@@ -58,11 +62,11 @@ export class AccountComponent implements OnInit{
 		 this.email = sessionStorage.getItem('email');
 	 }
 	 //Sign In
-	 signin(){	 
+	 public signin(){	 
          this.router.navigateByUrl('/login');
      } 
 	 //Logout User
-     logout(){	 	
+     public logout(){	 	
          //clear storage	 
 	     sessionStorage.clear();
 		 localStorage.clear();

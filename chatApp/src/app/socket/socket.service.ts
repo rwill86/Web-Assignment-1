@@ -11,11 +11,11 @@ export class SocketService{
      private url = 'http://localhost:3000';
      private socket;
 	 //Constructor
-     constructor(){ 
+     public constructor(){ 
 	     this.socket = io(this.url);
 	 }
 	 //Init
-	 ngOnInit(){		 
+	 public ngOnInit(){		 
 	 }
 	 //Send Messages
 	 public sendMessages(message){

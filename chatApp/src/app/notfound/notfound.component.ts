@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class NotfoundComponent implements OnInit{
 	 public login:boolean = false;
 	 //Constructor
-     constructor(){ 
+     public constructor(){ 
 	 }
      //Init
-     ngOnInit(){
+     public ngOnInit(){
 		 if(!sessionStorage.getItem('userName')){
 			 console.log('Not validated.');
 			 sessionStorage.clear();

@@ -1,15 +1,23 @@
 <!-- main content -->
 <div class="mainContent">  
-     <div class="h1">Chat Room</div>
+     <div class="h1">Chat</div>
 	 <div class="lineFooter"></div>
-	 <div class="subContent"> 
-	     <div class="p">Welcome {{userName}}</div>
+	 <div class="subContent"> <!--*ngFor="let user of users;"-->
+	     <div class="userList"> 
+	         <div class="h3">Online Users</div>
+		     <div class="p">- {{userName}}</div>		
+		     <button (click)="addUser()" type="submit" name="submit" class="smallButton"><i class="fas fa-plus"></i> Add User</button>
+		     <button (click)="removeUser()" type="submit" name="submit" class="smallButton"><i class="fas fa-trash-alt"></i> Remove User</button>
+		 </div>
+		 <div class="p">Channel 1</div>	
+		 <button (click)="addChannel()" type="submit" name="submit" class="smallButton"><i class="fas fa-plus"></i> Add Channel</button>
+		 <button (click)="removeChannel()" type="submit" name="submit" class="smallButton"><i class="fas fa-trash-alt"></i> Remove Channel</button>
 	 </div>
 	 <!-- message box -->
 	 <div class="messageContent">
 	     <div class="p black" *ngIf="!messages">No messages Yet.</div>
 	     <div class="userMessage" id="1" *ngFor="let message of messages;">
-			  <!-- user message -->
+		     <!-- user message -->
 			 <div class="userTextBoxContent">
 			     <div class="userBox">{{message.username}}</div>
 				 <span class="userText">{{message.text}}</span>
