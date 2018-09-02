@@ -15,14 +15,13 @@ const cors = require('cors');
 	 //const dbName = 'users';
 	 //const db = client.db(dbName);
 //});
-
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../dist/chatApp/')));
 app.use(cors(corsOptions));
 require('./auth.js')(app, fs);
 require('./register.js')(app, fs);
-require('./route.js')(app, path);
+require('./route.js')(app, path, fs);
 require('./socket.js')(app, io);
 require('./listen.js')(http);
 

@@ -69,16 +69,12 @@ export class UserComponent implements OnInit{
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
 		 var fa = document.getElementById('fail');
-		 var user = {
-			 username: username,
-			 email: email
-		 }
 		 //check if inputs are not null
          if(this.username !== '' || this.email !== ''){
-		     this.userServ.createUser(user).subscribe(
-		         data => { 
+			 this.userServ.regiUser(this.username, this.email).subscribe(
+			     data => { 
                      this.getUsers();
-				     console.log('User is created');
+				     console.log('User is created in json');
 				     this.username = '';
                      this.email = '';
                      return true;
@@ -89,7 +85,7 @@ export class UserComponent implements OnInit{
 					 fa.innerHTML = 'UserName and Email were incorrect.';
                      console.error(err);
                  }
-		     );
+			 );
 		 } else{
 			 eg.style.border = '2px solid #C70039';
 			 ug.style.border = '2px solid #C70039';

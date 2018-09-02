@@ -13,14 +13,16 @@ import { BrowserModule } from '@angular/platform-browser';
 //Class ChatComponent
 export class ChatComponent implements OnInit{
 	 public messages = [];
+	 public users = [];
      public message:string;
 	 public userName:string;
+	 public room:string = 'Lobby';
 	 public connection;
 	 public login:boolean = false;
 	 public admin:string;
 	 public checkIFGroupAdmin:boolean = false;
 	 //Constructor
-     public constructor(private router:Router, private sockServ:SocketService){	  
+     public constructor(private router:Router, private form:FormsModule, private sockServ:SocketService){	  
      }
      //Init
      public ngOnInit(){
@@ -73,7 +75,9 @@ export class ChatComponent implements OnInit{
 		 }
 	 }
 	 //Add Channel
-	 public addChannel(){		 
+	 public addChannel(event){	
+	     event.preventDefault();
+         //this.sockServ.addRoom(this.room);	 
 	 }
 	 //Add Channel
 	 public removeChannel(){		 

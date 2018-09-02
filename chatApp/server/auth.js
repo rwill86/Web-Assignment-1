@@ -13,16 +13,17 @@ module.exports = function(app, fs){
 			 } else{
 			     userObject = JSON.parse(data);
 				 for(var i = 0; i < userObject.length; i++){
-					 if(userObject[i].username == username){
+					 if(userObject[i].username == username && userObject[i].email == email){
 						 console.log('Found User.');
 						 //find instance of a username
-						 res.send({'username':username, 'success':true});
+						 res.send({'username':username, 'email':email, 'success':true});
 						 return;
 					 }
 				 }
 		     }
 			 //no username was found
-			 res.send({'username':username, 'success':false});
+			 res.send({'username':username, 'email':email, 'success':false});
+			 console.log('No User.');
 		 });
 	 });
 };

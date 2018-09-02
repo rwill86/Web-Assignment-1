@@ -21,6 +21,20 @@ export class SocketService{
 	 public sendMessages(message){
 		 this.socket.emit('add-message', message);
 	 }
+	 //Get User
+	 public getUser(username){
+		 this.socket.emit('add-user', username);
+	 }
+	 //Get room
+	 public addRoom(roomname){
+		 this.socket.emit('add-room', roomname);
+	 }
+	 //remove user
+	 public removeUser(username){
+	 }
+	  //remove room
+	 public removeRoom(roomname){
+	 }
 	 //Get Messages
 	 public getMessages = () => {
          return Observable.create((observer) => {

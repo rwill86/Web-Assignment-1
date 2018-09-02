@@ -59,6 +59,7 @@ export class LoginComponent implements OnInit{
 				     this.router.navigateByUrl('/account');
 			     },
 			     error => {
+					 console.log('error');
 				     eg.style.border = '2px solid #C70039';
 			         ug.style.border = '2px solid #C70039';
 				     console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
