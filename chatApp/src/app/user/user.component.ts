@@ -64,7 +64,7 @@ export class UserComponent implements OnInit{
              () => console.log('done loading users')			 
 		 );
 	 }
-	 //Create User
+     //Create User
 	 public createUser(username, email){
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
@@ -73,23 +73,31 @@ export class UserComponent implements OnInit{
          if(this.username !== '' || this.email !== ''){
 			 this.userServ.regiUser(this.username, this.email).subscribe(
 			     data => { 
-                     this.getUsers();
-				     console.log('User is created in json');
-				     this.username = '';
-                     this.email = '';
-                     return true;
+				     console.log(data);
+				     if(data.hasOwnProperty('success') == true){
+					 //if(data.success){ 
+                         this.getUsers();
+				         console.log('User is created in json');
+				         this.username = '';
+                         this.email = '';
+                         return true;
+					 } else{
+						 eg.style.border = '2px solid #C70039';
+			             ug.style.border = '2px solid #C70039';
+					     fa.innerHTML = 'UserName or Email already exist.';
+					 }
                  },
                  err => {
 				     eg.style.border = '2px solid #C70039';
 			         ug.style.border = '2px solid #C70039';
-					 fa.innerHTML = 'UserName and Email were incorrect.';
-                     console.error(err);
+					 fa.innerHTML = 'Error with Username and Email.';
+                     console.log(err);
                  }
 			 );
 		 } else{
 			 eg.style.border = '2px solid #C70039';
 			 ug.style.border = '2px solid #C70039';
-			 fa.innerHTML = 'UserName and Email were incorrect.';
+			 fa.innerHTML = 'UserName and Email are empty.';
 		 }
 	 }
 	 //Update User

@@ -31,9 +31,11 @@ export class SocketService{
 	 }
 	 //remove user
 	 public removeUser(username){
+		 this.socket.emit('remove-user', username);
 	 }
 	  //remove room
 	 public removeRoom(roomname){
+		 this.socket.emit('remove-room', roomname);
 	 }
 	 //Get Messages
 	 public getMessages = () => {

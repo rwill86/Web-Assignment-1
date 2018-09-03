@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user/user.service';
+export interface data{
+     //title: string;
+     //description: string;
+     success: boolean;
+}
 //Component
 @Component({
   selector: 'app-login',
@@ -12,6 +17,9 @@ import { UserService } from '../user/user.service';
 export class LoginComponent implements OnInit{
      public username:string = '';
      public email:string = '';
+	 public userID:string = '';
+	 public birthday:string = '';
+	 public age:string = '';
 	 public login:boolean = false;
 	 //Constructor
      public constructor(private router:Router, private form:FormsModule, private userServ:UserService){ 
@@ -35,35 +43,46 @@ export class LoginComponent implements OnInit{
 			 }
 		 }
      }
-	 //Login User 
+     //Login User 
 	 public loginUser(event){
 	     event.preventDefault();
 		 var message = document.getElementById('message');
 		 var ug = document.getElementById('username');
 		 var eg =  document.getElementById('email');
-		 var fa = document.getElementById('fail');
-		 
+		 var fa = document.getElementById('fail');		 
 		 //check if inputs are not null
          if(this.username !== '' || this.email !== ''){
 		     this.userServ.loginUser(this.username, this.email).subscribe(
 		         data => {
-				     localStorage.setItem('userName', this.username);
-				     sessionStorage.setItem('userName', this.username);
-				     sessionStorage.setItem('email', this.email);
-					 //sessionStorage.setItem('userID', data.userID);
-					 //sessionStorage.setItem('birthday', data.birthday);
-					 //sessionStorage.setItem('age', data.age);
-				     console.log('User is Login');
-				     eg.style.border = '';
-			         ug.style.border = '';
-				     this.router.navigateByUrl('/account');
+					 console.log(data);
+					 if(data.hasOwnProperty('success') == true){
+				     //if(data.success){
+						 //this.userID = data.userID;
+						 //this.birthday = data.birthday;
+						 //this.age = data.age;
+				         localStorage.setItem('userName', this.username);
+				         sessionStorage.setItem('userName', this.username);
+				         sessionStorage.setItem('email', this.email);
+					     sessionStorage.setItem('userID', this.userID);
+					     sessionStorage.setItem('birthday', this.birthday);
+					     sessionStorage.setItem('age', this.age);
+				         console.log('User is Login');
+				         eg.style.border = '';
+			             ug.style.border = '';
+				         this.router.navigateByUrl('/account');
+					 } else{
+						 eg.style.border = '2px solid #C70039';
+			             ug.style.border = '2px solid #C70039';
+				         console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
+				         fa.innerHTML = 'UserName and Email were incorrect.';
+				         this.login = false;
+					 }
 			     },
 			     error => {
 					 console.log('error');
 				     eg.style.border = '2px solid #C70039';
 			         ug.style.border = '2px solid #C70039';
-				     console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
-				     fa.innerHTML = 'UserName and Email were incorrect.';
+				     fa.innerHTML = 'Error with input.';
 				     this.login = false;
 			     }
 	         );
@@ -71,7 +90,7 @@ export class LoginComponent implements OnInit{
 			 eg.style.border = '2px solid #C70039';
 			 ug.style.border = '2px solid #C70039';
 		     console.log('UserName and Email were incorrect. \nUserName:' + this.username + '\nEmail:' + this.email);
-		     fa.innerHTML = 'UserName and Email were incorrect.';
+		     fa.innerHTML = 'UserName and Email are empty.';
 		     this.login = false;
 		 }
      }

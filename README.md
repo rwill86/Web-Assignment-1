@@ -11,8 +11,8 @@ Add NPM packages ```node npm i``` if needed.
 ## 	Run Instructions
 How to Run
 Enter ```ng build``` in command prompt to build the appilcation. This will create a ```/dist``` file.
-Run the NODE.JS server ```Node server.js```. Navigate to url ```http://localhost:3000``` and ```http://localhost:4200``` 
+Run the NODE.JS server ```node server.js``` and the Angular client ```ng serve``` . Navigate to url add ```http://localhost:3000``` and ```http://localhost:4200``` 
 ## Error Notes
-Unknown errors in program so far.
+'Propery doesn't exist on type Object' 
 ## Author
 Ritchie Wils, s2967766

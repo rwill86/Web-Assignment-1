@@ -1,7 +1,7 @@
 module.exports = function(app, fs){
 	 //Route to manage user logins
 	 app.get('/api/auth', (req, res) => {
-		 //localhost:3000/api/auth?username=Terry
+		 //localhost:3000/api/auth?username=Terry&email=terry@gmail.com
 	     var username = req.query.username;
 		 var email = req.query.email;
 		 var userObject;
@@ -16,7 +16,7 @@ module.exports = function(app, fs){
 					 if(userObject[i].username == username && userObject[i].email == email){
 						 console.log('Found User.');
 						 //find instance of a username
-						 res.send({'username':username, 'email':email, 'success':true});
+						 res.send({'userID':userObject[i].userID, 'username':username, 'email':email, 'birthday':userObject[i].birthday, 'age':userObject[i].age, 'success':true});
 						 return;
 					 }
 				 }

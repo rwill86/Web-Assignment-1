@@ -2,13 +2,15 @@ module.exports = function(app, io){
 	 console.log('Server Socket Initialised');
 	 var roomID = 1;
 	 var roomName = ['Lobby'];
-	 var usernames = {};
+	 var usernames = [];
 	 io.on('connection', (socket) => {
 		 console.log('user connection');
+		 socket.join('Lobby');
 		 //Disconnect user
 		 socket.on('disconnect', function(){
 			 console.log('user disconnect');			
 			 //io.sockets.emit('updateUser', usernames);
+			 //socket.broadcast.emit('Lobby', username + 'has disconnect');
 			 //socket.boardcast.emit('updateChat', 'Server', socket.username + ' has disconnect');
 			 //socket.leave(socket.room);
 		 });      
@@ -18,9 +20,18 @@ module.exports = function(app, io){
 			 //socket.push(data);
 			 //socket.emit('updateChat', roomName, socket.room);
 		 });
+		 //remove room/channel
+		 socket.on('remove-room', function(data){
+			 console.log('Remove room');
+			 //socket.push(data);
+			 //socket.emit('updateChat', roomName, socket.room);
+		 });
 		 //Add user
 		 socket.on('add-user', function(username){
 			 console.log('Added user');
+			 //socket.join('room' + ID, () => {
+				 //io.to('room' + ID, username + 'Has joined the room');
+			 //});
 			 //socket.username = username;
 			 //socket.room = 'lobby';
 			 //usernames[username] = username;
@@ -30,8 +41,10 @@ module.exports = function(app, io){
 			 //socket.emit('updateRoom', roomName, socket.room);
 		  });
 		 //Remove user
-		 socket.on('remove-user', function(username){			 
-			 socket.leave(socket.room);
+		 socket.on('remove-user', function(username){	
+		     console.log('removing user');
+             //socket.disconnect(true);		 
+             //socket.broadcast.emit('Lobby', username + 'has disconnect');
 		  });
 		 //Add message
 	     socket.on('add-message', (message) => {

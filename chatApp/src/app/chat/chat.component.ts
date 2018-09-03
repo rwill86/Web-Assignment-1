@@ -16,7 +16,7 @@ export class ChatComponent implements OnInit{
 	 public users = [];
      public message:string;
 	 public userName:string;
-	 public room:string = 'Lobby';
+	 public room:string;
 	 public connection;
 	 public login:boolean = false;
 	 public admin:string;
@@ -42,11 +42,9 @@ export class ChatComponent implements OnInit{
 				 console.log('LocalStorage Exist');
 			 } 
 			 this.userName = sessionStorage.getItem('userName');
+			 this.CheckAdmin();
 			 //Get Messsages
-			 this.connection = this.sockServ.getMessages().subscribe((message:string) => {
-				 this.messages.push(message);
-				 this.message = '';
-			 });
+			 this.getMes();
 		 }
      }
 	 //Check Admin
@@ -62,6 +60,13 @@ export class ChatComponent implements OnInit{
 		     this.admin = 'Group';
 		 }
 	 }
+	 //get Messages
+	 public getMes(){
+		 this.connection = this.sockServ.getMessages().subscribe((message:string) => {
+		     this.messages.push(message);
+			 this.message = '';
+		 });
+	 }
      //SendMessage
 	 public sendMessage(){
 		 if(this.message !== ''){
@@ -76,17 +81,20 @@ export class ChatComponent implements OnInit{
 	 }
 	 //Add Channel
 	 public addChannel(event){	
-	     event.preventDefault();
-         //this.sockServ.addRoom(this.room);	 
+	     event.preventDefault();	
+         this.sockServ.addRoom(this.room);	 
 	 }
 	 //Add Channel
-	 public removeChannel(){		 
+	 public removeChannel(){	
+         this.sockServ.removeRoom('room');	 
 	 }	 
 	 //Add user
-	 public addUser(){		 
+	 public getUser(){	
+         this.sockServ.getUser('user');	 	 
 	 }
 	 //remove User
-	 public removeUser(){		 
+ 	 public removeUser(){
+         this.sockServ.removeUser('user');			 
 	 }
 	 //Destory ng 
 	 public ngOnDestory(){

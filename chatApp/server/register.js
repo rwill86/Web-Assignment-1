@@ -18,7 +18,7 @@ module.exports = function(app, fs){
 			 } else{
 			     userObject = JSON.parse(data);
 				 for(var i = 0; i < userObject.length; i++){
-					 if(userObject[i].username == username && userObject[i].email == email){
+					 if(userObject[i].username == username || userObject[i].email == email){
 						 //Check for duplicates users
 						 user = 1;
 					 }
