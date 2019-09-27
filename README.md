@@ -15,4 +15,4 @@ Run the NODE.JS server ```node server.js``` and the Angular client ```ng serve``
 ## Error Notes
 'Propery doesn't exist on type Object' 
 ## Author
-Ritchie Wils, s2967766
+Ritchie, s2967766
